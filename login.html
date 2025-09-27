@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="login.css">
+
+
+   <title>Glassmorphism login form</title>
+</head>
+
+<body>
+   <div class="particles">
+      <div class="particle" style="left:10%; animation-duration: 14s; animation-delay: 0s;"></div>
+      <div class="particle" style="left:20%; animation-duration: 18s; animation-delay: 2s;"></div>
+      <div class="particle" style="left:35%; animation-duration: 12s; animation-delay: 4s;"></div>
+      <div class="particle" style="left:50%; animation-duration: 20s; animation-delay: 1s;"></div>
+      <div class="particle" style="left:65%; animation-duration: 16s; animation-delay: 3s;"></div>
+      <div class="particle" style="left:80%; animation-duration: 19s; animation-delay: 5s;"></div>
+      <div class="particle" style="left:90%; animation-duration: 15s; animation-delay: 7s;"></div>
+    </div>
+   <div class="login"> 
+      <!-- <img src="./login-bg.png" alt="login image" class="login__img"> -->
+
+      <form  class="container">
+         <h1 class="login__title">Login</h1>
+
+         <div class="login__content">
+            <div class="login__box">
+               <i class="ri-user-3-line login__icon"></i>
+
+               <div class="login__box-input">
+                  <input type="email" required class="login__input" id="login-email" placeholder="Email">
+                  <label for="login-email" class="login__label"></label>
+                  <span id="email_error"></span>
+               </div>
+            </div>
+            <div class="login__box">
+               <i class="ri-lock-2-line login__icon"></i>
+            
+               <div class="login__box-input">
+                  <input type="password" required class="login__input" id="login-pass" placeholder="Password">
+                  <label for="login-pass" class="login__label"></label>
+                  <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+               <span id="pass_error"></span>
+
+               </div>
+            
+            </div>
+         <div class="login__check">
+            <div class="login__check-group">
+               <input type="checkbox" class="login__check-input" id="login-check">
+               <label for="login-check" class="login__check-label">Remember me</label>
+            </div>
+
+            <a href="#" class="login__forgot">Forgot Password?</a>
+         </div>
+
+         <button type="submit" class="login__button">Login</button>
+
+         <p class="login__register">
+            Don't have an account? <a href="index.html">Register</a>
+         </p>
+
+      </form>
+   </div>
+   <div class="modal modal-3" id="modal-3">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+         <button onclick="closeModal()" class="modal-close">&times;</button>
+
+         <div class="modal-header">
+            <h2>Success!</h2>
+            <p>Your action was completed successfully</p>
+         </div>
+
+         <div class="success-icon">
+            <div>
+               <i class="fas fa-check"></i>
+           </div>
+         </div>
+
+         <div class="modal-body">
+            <p>Thank you for your submission.</p>
+         </div>
+
+      </div>
+   </div>
+
+   <script src="login.js"></script>
+</body>
+
+</html>

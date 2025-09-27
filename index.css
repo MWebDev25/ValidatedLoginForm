@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+} 
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #0ea5e9 100%);
+    /* background-image: url(login-bg.png); */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.signup_header h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+
+    letter-spacing: 1px;
+  }
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.signup_header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+
+.signup_header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.input_div {
+
+    position: relative;
+}
+
+.input_div label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.input_div input {
+    width: 100%;
+    /* position: relative; */
+    padding: 15px 45px 15px 45px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.input_div input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    /* softer, not too white */
+    border-color: #38bdf8;
+    /* nice cyan-blue glow */
+    box-shadow: 0 0 8px #38bdf8;
+}
+
+.input_div i {
+    position: absolute;
+    left: 15px;
+    top: 45px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+}
+
+.input_div span {
+    display: block;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    min-height: 20px;
+    font-weight: 500;
+}
+
+#btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #0ea5e9;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#btn:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+footer a {
+    color: #0ea5e9;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+}
+
+/* When invalid */
+.input-error {
+    border: 2px solid red !important;
+}
+
+/* When valid */
+.input-success {
+    border: 2px solid rgb(0, 186, 0) !important;
+}
+
+
+.alert.success {
+    background: #22c55e;
+    /* green */
+    color: white;
+}
+
+.alert.error {
+    background: #ef4444;
+    /* red */
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+    background: #1f2937;
+    border-radius: 16px;
+    padding: 40px 30px 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-header p {
+    color: #d1d5db;
+    margin-bottom: 0;
+}
+
+/* Success Icon */
+.success-icon {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.success-icon div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #10b981;
+}
+
+.modal-body {
+    margin-bottom: 25px;
+}
+
+.modal-body p {
+    text-align: center;
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .signup_header h1 {
+        font-size: 2rem;
+    }
+}
